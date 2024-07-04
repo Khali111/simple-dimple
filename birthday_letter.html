@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Letter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #letter {
+            text-align: left;
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Click the button to reveal your birthday letter!</h1>
+        <button id="revealBtn">Reveal Letter</button>
+        <div id="letter" class="hidden">
+            <h2>My Dearest Lyna,</h2>
+            <p>Today is a special day because it's your birthday. 🎉🎂</p>
+            <p>On this day, I want you to know how much you mean to me.</p>
+            <p>You bring so much joy and love into my life. Your smile brightens my day, and your laughter is music to my ears.</p>
+            <p>Being apart from you is hard, but please know that distance can't diminish the love I feel for you.</p>
+            <p>I can't wait to see you again and hold you close. Until then, know that you are always in my thoughts and in my heart.</p>
+            <p>Happy Birthday, my love. Here's to many more birthdays together and making beautiful memories.</p>
+            <p>With all my love,</p>
+            <p>Khalil</p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript code to reveal the birthday letter
+
+        // Get the button and the letter element
+        const revealBtn = document.getElementById('revealBtn');
+        const letter = document.getElementById('letter');
+
+        // Add click event listener to the button
+        revealBtn.addEventListener('click', function() {
+            // Toggle the 'hidden' class on the letter element
+            letter.classList.toggle('hidden');
+
+            // Change the button text based on whether the letter is revealed or hidden
+            if (letter.classList.contains('hidden')) {
+                revealBtn.textContent = 'Reveal Letter';
+            } else {
+                revealBtn.textContent = 'Hide Letter';
+            }
+        });
+    </script>
+</body>
+</html>
